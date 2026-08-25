@@ -1,0 +1,428 @@
+/* Mobile Responsive Enhancements for NovaGuard */
+
+/* Global Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Improve touch targets */
+  button, 
+  .btn, 
+  .nav-link, 
+  .social-link,
+  .filter-tab,
+  .category-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better text readability */
+  p, span, div {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Improve form elements */
+  input, 
+  textarea, 
+  select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    max-width: 100%;
+  }
+
+  /* Better spacing for mobile */
+  .container,
+  .section,
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Stack flex items vertically on mobile */
+  .flex-row {
+    flex-direction: column !important;
+  }
+
+  /* Improve grid layouts */
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  /* Better image handling */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Improve button layouts */
+  .btn-group,
+  .button-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn-group .btn,
+  .button-group .btn {
+    width: 100%;
+  }
+
+  /* Better navigation */
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-item:last-child {
+    border-bottom: none;
+  }
+
+  /* Improve dropdowns */
+  .dropdown-menu {
+    position: static !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Better card layouts */
+  .card,
+  .service-card,
+  .product-card,
+  .testimonial-card {
+    margin-bottom: 1rem;
+  }
+
+  /* Improve table responsiveness */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /* Better modal handling */
+  .modal {
+    padding: 1rem;
+  }
+
+  .modal-content {
+    margin: 0;
+    max-width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* Improve carousel/slider */
+  .carousel,
+  .slider {
+    overflow: hidden;
+  }
+
+  .carousel-item,
+  .slider-item {
+    width: 100% !important;
+  }
+
+  /* Better form layouts */
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Improve spacing */
+  .section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+  /* Better list layouts */
+  ul, ol {
+    padding-left: 1.5rem;
+  }
+
+  /* Improve icon sizing */
+  .icon,
+  .fa,
+  .fas,
+  .far,
+  .fab {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller screens */
+  .container,
+  .section,
+  .content {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  /* Smaller touch targets for very small screens */
+  button, 
+  .btn, 
+  .nav-link, 
+  .social-link {
+    min-height: 40px;
+    min-width: 40px;
+  }
+
+  /* Better typography scaling */
+  h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: clamp(1.3rem, 5vw, 1.6rem);
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 4vw, 1.3rem);
+    line-height: 1.4;
+  }
+
+  h4 {
+    font-size: clamp(1rem, 3.5vw, 1.1rem);
+    line-height: 1.4;
+  }
+
+  p {
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.6;
+  }
+
+  /* Better spacing for very small screens */
+  .section {
+    padding: 1.5rem 0;
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+
+  /* Improve card padding */
+  .card,
+  .service-card,
+  .product-card,
+  .testimonial-card {
+    padding: 1rem;
+  }
+
+  /* Better button sizing */
+  .btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  /* Improve form elements */
+  input, 
+  textarea, 
+  select {
+    padding: 0.75rem;
+    font-size: 16px;
+  }
+
+  /* Better grid gaps */
+  .grid {
+    gap: 0.75rem;
+  }
+
+  /* Improve navigation */
+  .nav-link {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* Better social links */
+  .social-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* Improve footer */
+  .footer {
+    padding: 2rem 0 1rem;
+  }
+
+  .footer-content {
+    gap: 1.5rem;
+  }
+
+  /* Better spacing for lists */
+  ul, ol {
+    padding-left: 1.25rem;
+  }
+
+  /* Improve icon sizing */
+  .icon,
+  .fa,
+  .fas,
+  .far,
+  .fab {
+    font-size: 1.1em;
+  }
+}
+
+/* Landscape orientation fixes */
+@media (max-width: 768px) and (orientation: landscape) {
+  .hero-section {
+    min-height: 70vh;
+  }
+
+  .section {
+    padding: 1.5rem 0;
+  }
+
+  .nav {
+    max-height: 80vh;
+  }
+}
+
+/* High DPI display optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  /* Add dark mode styles if needed */
+}
+
+/* Print styles */
+@media print {
+  .nav,
+  .footer,
+  .btn,
+  .social-links {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+}
+
+/* Focus styles for accessibility */
+@media (max-width: 768px) {
+  button:focus,
+  .btn:focus,
+  .nav-link:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: 2px solid #0072ce;
+    outline-offset: 2px;
+  }
+}
+
+/* Loading states for mobile */
+@media (max-width: 768px) {
+  .loading {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+}
+
+/* Mobile-specific utility classes */
+@media (max-width: 768px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-visible {
+    display: block !important;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-text-left {
+    text-align: left !important;
+  }
+
+  .mobile-text-right {
+    text-align: right !important;
+  }
+
+  .mobile-margin-0 {
+    margin: 0 !important;
+  }
+
+  .mobile-padding-0 {
+    padding: 0 !important;
+  }
+
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+
+  .mobile-wrap {
+    flex-wrap: wrap !important;
+  }
+} 

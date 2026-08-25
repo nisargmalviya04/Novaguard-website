@@ -1,0 +1,151 @@
+/* Premium Animations for OurStorySection */
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes float-0 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
+}
+
+@keyframes float-1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-15px) rotate(-180deg); opacity: 0.8; }
+}
+
+@keyframes float-2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-25px) rotate(90deg); opacity: 0.8; }
+}
+
+@keyframes float-3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-18px) rotate(-90deg); opacity: 0.8; }
+}
+
+@keyframes float-4 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-22px) rotate(45deg); opacity: 0.8; }
+}
+
+@keyframes float-5 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+  50% { transform: translateY(-16px) rotate(-45deg); opacity: 0.8; }
+}
+
+/* Premium Badge Hover Effects */
+.premium-badge:hover .badge-shimmer {
+  left: 100%;
+}
+
+.premium-badge:hover svg {
+  transform: rotate(360deg);
+}
+
+/* Premium Text Card Hover Effects */
+.premium-text-card:hover .card-shimmer {
+  left: 100%;
+}
+
+/* Stats Row Container */
+.stats-row-container {
+  margin-top: 48px;
+  min-height: 60px;
+  border-top: 1px solid #eee;
+  padding-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+}
+
+.stats-item {
+  min-width: 180px;
+  flex: 0 1 220px;
+  text-align: center;
+}
+
+.stats-number {
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.stats-label {
+  color: #222;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .stats-row-container {
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 24px;
+    margin-top: 32px;
+  }
+  
+  .stats-item {
+    min-width: auto;
+    flex: none;
+    width: 100%;
+  }
+  
+  .stats-number {
+    font-size: clamp(28px, 6vw, 32px);
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .stats-label {
+    font-size: clamp(14px, 3.5vw, 16px);
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-row-container {
+    gap: 24px;
+    padding-top: 20px;
+    margin-top: 24px;
+  }
+  
+  .stats-number {
+    font-size: clamp(24px, 5vw, 28px);
+  }
+  
+  .stats-label {
+    font-size: clamp(13px, 3vw, 15px);
+  }
+} 

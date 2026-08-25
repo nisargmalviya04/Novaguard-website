@@ -1,0 +1,1274 @@
+.pp-corrugated-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #475569 0%, #64748b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.pp-corrugated-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(17, 153, 142, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(56, 239, 125, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-header {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.page-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #64748b, #475569);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.product-showcase {
+  position: relative;
+  z-index: 2;
+  margin-top: 3rem;
+}
+
+.showcase-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.tab-buttons {
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  padding: 0.5rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tab-button.active {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tab-button:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.overview-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.variant-selector {
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+}
+
+.variant-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.variant-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.variant-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.variant-card.selected {
+  border-color: rgba(56, 239, 125, 0.5);
+  box-shadow: 0 15px 35px rgba(56, 239, 125, 0.2);
+}
+
+.variant-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  border-radius: 15px 15px 0 0;
+  background: linear-gradient(90deg, #ff6600 0%, #0057b8 100%);
+}
+
+.variant-content h3 {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.variant-content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.variant-price {
+  color: #64748b;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.variant-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.product-detail {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.premium-image-gallery {
+  position: relative;
+}
+
+.main-image-wrapper {
+  position: relative;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.05);
+  height: 400px;
+}
+
+.hero-main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+}
+
+.main-image-container:hover .image-overlay {
+  opacity: 1;
+}
+
+.zoom-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.gallery-thumbnails {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gallery-thumbnail-wrapper {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.gallery-thumbnail-wrapper.active {
+  border-color: #64748b;
+}
+
+.gallery-thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.product-info h2 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.product-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.product-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.product-features h4 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.feature-icon {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.product-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #64748b, #475569);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(56, 239, 125, 0.3);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.properties-content, .industries-content, .sustainability-content, .testimonials-content {
+  margin-bottom: 3rem;
+}
+
+.specifications-section, .material-properties-section {
+  margin-bottom: 3rem;
+}
+
+.specifications-section h3, .material-properties-section h3 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.specs-grid, .properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.spec-item, .property-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.spec-label, .property-name {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.spec-value, .property-value {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.property-header {
+  margin-bottom: 1rem;
+}
+
+.property-description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.industries-grid, .sustainability-grid, .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.industry-card, .sustainability-card, .testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.industry-card:hover, .sustainability-card:hover, .testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.industry-icon, .sustainability-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.industry-card h4, .sustainability-card h4, .testimonial-card .author-name {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.industry-card p, .sustainability-card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.industry-use-cases, .industry-benefits, .sustainability-benefits {
+  margin-bottom: 1.5rem;
+}
+
+.industry-use-cases h5, .industry-benefits h5, .sustainability-benefits h5 {
+  color: #64748b;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.use-cases-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.use-case-item {
+  background: rgba(56, 239, 125, 0.2);
+  color: #64748b;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+.benefit-icon {
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.testimonial-rating {
+  color: #64748b;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-text {
+  color: rgba(255, 255, 255, 0.9);
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-author {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+}
+
+.author-company {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.page-cta {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.cta-content h3 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn.primary {
+  background: linear-gradient(135deg, #64748b, #475569);
+  color: white;
+}
+
+.cta-btn.secondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.cta-btn.primary:hover .btn-shine {
+  left: 100%;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .overview-content {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .variant-list {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+  }
+  
+  .variant-card {
+    min-width: 280px;
+    flex-shrink: 0;
+  }
+  
+  .page-title {
+    font-size: 3.2rem;
+  }
+  
+  .main-image-wrapper {
+    height: 350px;
+  }
+  
+  .detail-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.4rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .container {
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .page-header {
+    padding: 3rem 0 1.5rem;
+  }
+  
+  .page-badge {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.4rem;
+    margin-bottom: 1.3rem;
+  }
+  
+  .overview-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .product-showcase {
+    margin-top: 1.5rem;
+    padding: 1.5rem 0.8rem;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  
+  .testimonials-content,
+  .applications-content,
+  .industries-content,
+  .sustainability-content {
+    padding-bottom: 2rem;
+  }
+  
+  .testimonials-grid,
+  .applications-grid,
+  .industries-grid,
+  .sustainability-grid {
+    margin-bottom: 2rem;
+  }
+  
+  .tab-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.7rem;
+  }
+  
+  .tab-button {
+    font-size: 0.8rem;
+    padding: 0.7rem 1.3rem;
+    white-space: nowrap;
+    min-width: fit-content;
+  }
+  
+  .variant-list {
+    flex-direction: column;
+    overflow-x: visible;
+  }
+  
+  .variant-card {
+    min-width: auto;
+    padding: 1.4rem;
+    width: 100%;
+  }
+  
+  .variant-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .variant-content p {
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .variant-price {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .variant-rating {
+    font-size: 0.8rem;
+  }
+  
+  .detail-container {
+    grid-template-columns: 1fr;
+    padding: 1.6rem;
+  }
+  
+  .premium-image-gallery {
+    margin-bottom: 1.8rem;
+  }
+  
+  .main-image-wrapper {
+    height: 280px;
+  }
+  
+  .gallery-thumbnails {
+    gap: 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-thumbnail {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+  }
+  
+  .product-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .product-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .product-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.6rem;
+  }
+  
+  .product-features h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  
+  .feature-item {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .product-actions {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.9rem;
+  }
+  
+  .specs-grid, .properties-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+  
+  .spec-item, .property-item {
+    padding: 1.3rem;
+  }
+  
+  .spec-label, .property-name {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .spec-value, .property-value {
+    font-size: 1rem;
+  }
+  
+  .property-description {
+    font-size: 0.8rem;
+    line-height: 1.3;
+  }
+  
+  .industries-grid, .sustainability-grid, .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .industry-card, .sustainability-card, .testimonial-card {
+    padding: 1.8rem 0.8rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+  }
+  
+  .industry-icon, .sustainability-icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .industry-card h4, .sustainability-card h4, .testimonial-card .author-name {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .industry-card p, .sustainability-card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+  
+  .use-cases-list {
+    gap: 0.5rem;
+  }
+  
+  .use-case-item {
+    padding: 0.3rem 0.7rem;
+    font-size: 0.75rem;
+    border-radius: 12px;
+  }
+  
+  .benefits-list {
+    gap: 0.4rem;
+  }
+  
+  .benefit-item {
+    font-size: 0.85rem;
+  }
+  
+  .testimonial-rating {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.2rem;
+  }
+  
+  .testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .author-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+  }
+  
+  .author-company {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.8;
+  }
+  
+  .page-cta {
+    padding: 2.5rem;
+    margin-top: 3rem;
+  }
+  
+  .testimonials-content,
+  .applications-content,
+  .industries-content,
+  .sustainability-content {
+    padding-bottom: 3rem;
+  }
+  
+  .testimonials-grid,
+  .applications-grid,
+  .industries-grid,
+  .sustainability-grid {
+    margin-bottom: 2.5rem;
+  }
+  
+  .cta-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .cta-content p {
+    font-size: 1rem;
+    margin-bottom: 1.8rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .cta-btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    padding: 0.9rem 1.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.1;
+  }
+  
+  .page-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .page-header {
+    padding: 2.5rem 0 1rem;
+  }
+  
+  .page-badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .container {
+    padding: 0 0.4rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .tab-buttons {
+    padding: 0.6rem;
+    gap: 0.4rem;
+  }
+  
+  .tab-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.75rem;
+    border-radius: 20px;
+  }
+  
+  .variant-card {
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+  
+  .variant-content h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .variant-content p {
+    font-size: 0.8rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .variant-price {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .variant-rating {
+    font-size: 0.75rem;
+  }
+  
+  .detail-container {
+    padding: 1.2rem;
+  }
+  
+  .main-image-wrapper {
+    height: 220px;
+  }
+  
+  .gallery-thumbnail {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+  }
+  
+  .product-info h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .product-subtitle {
+    font-size: 0.85rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .product-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 1.4rem;
+  }
+  
+  .product-features h4 {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .feature-item {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.85rem;
+  }
+  
+  .specs-grid, .properties-grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .spec-item, .property-item {
+    padding: 1.1rem;
+  }
+  
+  .spec-label, .property-name {
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .spec-value, .property-value {
+    font-size: 0.95rem;
+  }
+  
+  .property-description {
+    font-size: 0.75rem;
+    line-height: 1.2;
+  }
+  
+  .industry-card, .sustainability-card, .testimonial-card {
+    padding: 1.4rem;
+  }
+  
+  .industry-icon, .sustainability-icon {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .industry-card h4, .sustainability-card h4, .testimonial-card .author-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .industry-card p, .sustainability-card p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1.1rem;
+  }
+  
+  .use-case-item {
+    padding: 0.25rem 0.6rem;
+    font-size: 0.7rem;
+  }
+  
+  .benefit-item {
+    font-size: 0.8rem;
+  }
+  
+  .testimonial-rating {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  .testimonial-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1.1rem;
+  }
+  
+  .author-company {
+    font-size: 0.75rem;
+  }
+  
+  .page-cta {
+    padding: 2rem 1.2rem;
+    border-radius: 15px;
+  }
+  
+  .cta-content h3 {
+    font-size: 1.6rem;
+    line-height: 1.2;
+    margin-bottom: 0.7rem;
+  }
+  
+  .cta-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 1.6rem;
+  }
+  
+  .cta-btn {
+    max-width: 250px;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.85rem;
+    border-radius: 8px;
+  }
+}
+
+/* Additional Mobile Enhancements */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .page-subtitle {
+    font-size: 0.85rem;
+  }
+  
+  .page-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+  }
+  
+  .tab-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.7rem;
+  }
+  
+  .variant-card {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .detail-container {
+    padding: 1rem;
+  }
+  
+  .main-image-wrapper {
+    height: 200px;
+  }
+  
+  .gallery-thumbnail {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .product-info h2 {
+    font-size: 1.2rem;
+  }
+  
+  .product-subtitle {
+    font-size: 0.8rem;
+  }
+  
+  .product-description {
+    font-size: 0.8rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .spec-item, .property-item {
+    padding: 1rem;
+  }
+  
+  .industry-card, .sustainability-card, .testimonial-card {
+    padding: 1.2rem 0.6rem;
+    box-sizing: border-box;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  
+  .testimonial-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+  }
+  
+  .industry-icon, .sustainability-icon {
+    font-size: 2rem;
+  }
+  
+  .page-cta {
+    padding: 1.8rem 1rem;
+  }
+  
+  .testimonials-content,
+  .applications-content,
+  .industries-content,
+  .sustainability-content {
+    padding-bottom: 3.5rem;
+  }
+  
+  .testimonials-grid,
+  .applications-grid,
+  .industries-grid,
+  .sustainability-grid {
+    margin-bottom: 3rem;
+  }
+  
+  .cta-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .cta-content p {
+    font-size: 0.85rem;
+  }
+  
+  .cta-btn {
+    max-width: 220px;
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+}
